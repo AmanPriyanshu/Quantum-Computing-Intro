@@ -1,5 +1,5 @@
 # Quantum_Computing_Intro
-Understanding and exploring Quantum-Computing conecpts as well as developing some simple code for it.
+Understanding and exploring Quantum-Computing conecpts as well as developing some simple code for its implementation. These are my notes for understanding and revising later if I forget something
 
 ## Table of Contents:
 
@@ -11,6 +11,8 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
         - [Light as Particles](#light-as-particles)
         - [Matter as Waves](#matter-as-waves)
     - [Quantum Computing](#quantum-computing)
+        - [Qubits](#qubits)
+        - [Quantum Logic Gates](#quantum-logic-gates)
     - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
     - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
 - [LIBRARIES- which I have tried out](#libraries)
@@ -51,16 +53,24 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 <a name="quantum-computing"></a>
 ### Quantum Computing
 ##### Quantum Computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically[1]:I-5 There are two main approaches to physically implementing a quantum computer currently, analog and digital. Analog approaches are further divided into quantum simulation, quantum annealing, and adiabatic quantum computation. Digital quantum computers use quantum logic gates to do computation. Both approaches use quantum bits or qubits. (Reference: <https://www.nap.edu/catalog/25196/quantum-computing-progress-and-prospects>)
+
+<a name="qubits"></a>
 #### Qubits
-##### Qubits or Quantum Bits are interesting as they break normal norms of bits containing onyl 0's and 1's. Even though they may contain a 0 or a 1 quantum state, but they can still be in superpostion. However, when qubits are measured the result is always either a 0 or a 1; the probabilities of the two outcomes depends on the quantum state they were in. It is the basic quantum information, the quantum version of the classical binary bit physically realized with a two-state device. A qubit is a two-state (or two-level) quantum-mechanical system, one of the simplest quantum systems displaying the peculiarity of quantum mechanics.
+##### Qubits or Quantum Bits are interesting as they break normal norms of bits containing only 0's and 1's. Even though they may contain a 0 or a 1 quantum state, but they can still be in superpostion. However, when qubits are measured the result is always either a 0 or a 1; the probabilities of the two outcomes depends on the quantum state they were in. It is the basic quantum information, the quantum version of the classical binary bit physically realized with a two-state device. A qubit is a two-state (or two-level) quantum-mechanical system, one of the simplest quantum systems displaying the peculiarity of quantum mechanics.
 ##### Two-state quantum mechanical system: in quantum mechanics, a two-state system (or two-level) is a quantum system that can exist in any quantum superposition of two independent (physically distinguishable) quantum states. The Hilbert space describing such a system is two-dimensional. Therefore, a complete basis spanning the space will consist of two independent states.
 ##### Hilbert Space: A mathematical concept which extends the methods of vector algebra and calculus from the two-dimensional Euclidean plane and three-dimensional space to spaces with any finite or infinite number of dimensions. The Hilbert space must be:
 * A Linear Vector Space.
 * Have a natural inner product, or dot product, providing a distance function.
 * Under this distance function it becomes a complete metric system.
 * Inner product is conjugate symmetric
-* Linear w.r.t second vector in Inner product
 * Anti-Linear w.r.t first vector in Inner product
+* Linear w.r.t second vector in Inner product
 * Positive Definiteness: Inner product of a vector with itself must not be negative (i.e >= 0) and =0 only if the vector itself is zero
 * Closeness of two vectors is given by distance formula
-* Hilbert spaces are Seperable. So they contain a countable, dense, subset. Now what makes a set/space countable. For example Integers are countable, even though we have to count till infinty they are still
+* Hilbert spaces are Seperable. So they contain a countable, dense, subset. Now what makes a set/space countable. For example Integers are countable, even though we have to count till infinty they are still mathematically or say theoretically countable. Just like that rational numbers which can be expressed as ratios of these Integers can be tagged as Countable. Now a subset A is said to dense if every point x in X either belongs to A or is a limit point of A; For Eg: the rational numbers are a dense subset of the real numbers because every real number either is a rational number or has a rational number arbitrarily close to it. Finally seperable: Now since the Rational Numbers are a subest of Real Numbers and since they are countable and dense then we can call Real Numbers as Seperable.
+* Hilbert spaces are complete (No breaks, openings, etc.)
+
+<a name="quantum-logic-gates"></a>
+#### Quantum Logic Gates
+##### The prevailing model of quantum computation describes the computation in terms of a network of quantum logic gates. In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits. Unlike many classical logic gates, quantum logic gates are reversible.
+##### Quantum logic gates are represented by unitary matrices. The number of qubits in the input and output of the gate must be equal; a gate which acts on {\displaystyle n}n qubits is represented by a {\displaystyle 2^{n}\times 2^{n}}2^{n}\times 2^{n} unitary matrix. The quantum states that the gates act upon are vectors in {\displaystyle 2^{n}}2^{n} complex dimensions. The base vectors are the possible outcomes if measured, and a quantum state is a linear combination of these outcomes.
