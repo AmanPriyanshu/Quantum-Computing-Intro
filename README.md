@@ -12,7 +12,10 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
         - [Matter as Waves](#matter-as-waves)
     - [Quantum Computing](#quantum-computing)
         - [Qubits](#qubits)
-        - [Quantum Logic Gates](#quantum-logic-gates)
+        - [Quantum Logic Gates Basics](#quantum-logic-gates-basics)
+        - [Quantum Memory](#quantum-memory)
+        - [Quantum Gates](#quantum-gates)
+        -
     - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
     - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
 - [LIBRARIES- which I have tried out](#libraries)
@@ -70,7 +73,24 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 * Hilbert spaces are Seperable. So they contain a countable, dense, subset. Now what makes a set/space countable. For example Integers are countable, even though we have to count till infinty they are still mathematically or say theoretically countable. Just like that rational numbers which can be expressed as ratios of these Integers can be tagged as Countable. Now a subset A is said to dense if every point x in X either belongs to A or is a limit point of A; For Eg: the rational numbers are a dense subset of the real numbers because every real number either is a rational number or has a rational number arbitrarily close to it. Finally seperable: Now since the Rational Numbers are a subest of Real Numbers and since they are countable and dense then we can call Real Numbers as Seperable.
 * Hilbert spaces are complete (No breaks, openings, etc.)
 
-<a name="quantum-logic-gates"></a>
-#### Quantum Logic Gates
+<a name="quantum-logic-gates-basics"></a>
+#### Quantum Logic Gates Basics
 ##### The prevailing model of quantum computation describes the computation in terms of a network of quantum logic gates. In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits. Unlike many classical logic gates, quantum logic gates are reversible.
 ##### Quantum logic gates are represented by unitary matrices. The number of qubits in the input and output of the gate must be equal; a gate which acts on n qubits is represented by a 2^n x 2^n unitary matrix. The quantum states that the gates act upon are vectors in 2^n complex dimensions. The base vectors are the possible outcomes if measured, and a quantum state is a linear combination of these outcomes.
+##### A memory consisting of n bits of information has 2^n possible states (Each bit could be a 0 or 1 independent of the others, so 2x2x2...n times). A vector representing all memory states has hence 2^n entries (one for each state). This vector should be viewed as a probability vector and represents the fact that the memory is to be found in a particular state. Now classical bits give us a 100% result, however, here it is a probability matrix (Density Matrix). Density Matrix: is a matrix that describes the statistical state of a system in quantum mechanics. The probability for any outcome of any well-defined measurement upon a system can be calculated from the density matrix for that system.
+<a name="quantum-memory"></a>
+#### Quantum Memory
+##### This memory may be found in one of two classical states: the zero state or the one state. We may represent the state of this memory using Dirac notation:
+##### |0> := (1)
+#####        (0)
+##### |1> := (0)
+#####        (1)
+*How do I add Images*
+##### A quantum memory may then be found in any quantum superposition |Ψ> of the two classical states |0> and |1>:
+##### |Ψ> := α|0> + β|1> := (α)
+#####                       (β)
+##### α^2 + β^2 = 1
+##### In general, the coefficients α and β are complex numbers. In this scenario, one qubit of information is said to be encoded into the quantum memory. The state |Ψ> is not itself a probability vector but can be connected with a probability vector via a measurement operation. If the quantum memory is measured to determine if the state is |0> or |1> (this is known as a computational basis measurement), the zero state would be observed with probability α^2 and the one state with probability β^2. The numbers α and β are called quantum amplitudes.
+
+<a name="quantum-gates"></a>
+#### Quantum Gates
