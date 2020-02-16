@@ -15,9 +15,12 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
         - [Quantum Logic Gates Basics](#quantum-logic-gates-basics)
         - [Quantum Memory](#quantum-memory)
         - [Quantum Entanglement](#quantum-entanglement)
-        - [Quantum Gates](#quantum-gates)
-    - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
-    - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
+- [Quantum Gates](#quantum-gates)
+    - [Single Qubit](#single-qubit)
+        - [Hadamard Gate](#hadamard-gate)
+        - [Pauli-X Gate](#pauli-x-gate)
+- [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
+- [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
 - [LIBRARIES- which I have tried out](#libraries)
     - [Quiskit](#quiskit)
     <!--- - [Yao.jl](#yao-jl) --->
@@ -101,5 +104,126 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 
 
 <a name="quantum-gates"></a>
-#### Quantum Gates
-##### In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits. Let us undestand some of the basic gates. *nly mentioning those I have come across or read about. I'm fairly new to the topic but I wanted to explore so I may not have included many gat
+## Quantum Gates
+##### In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits. Let us undestand some of the basic gates. *Only mentioning those I have come across or read about. I'm fairly new to the topic but I wanted to explore so I may not have included many gates.*
+<a name="single-qubit"></a>
+### Single Qubit
+
+<a name="hadamard-gate"></a>
+#### Hadamard Gate
+##### It maps the basis state |0>  to (|0> + |1>)/(2)^0.5 and |1>  to (|0> - |1>)/(2)^0.5, which means that a measurement will have equal probabilities to becomes either of the two classical states. For example, say we have: 
+##### α|0> + β|1> --|H|-> α(|0> + |1>)/(2)^0.5 + β(|0> - |1>)/(2)^0.5 = (α + β)|0>/(2)^0.5 + (α - β)|1>/(2)^0.5
+##### We can clearly see H = [1  1]
+##### .                      [1 -1]/(2)^0.5
+##### So the operations is conducted as H|0> or H|1> to give the above output. It is as usual a Reversible gate.
+##### Application: Expand the range of states which its possible for a computer to be in. It allows us to take optimized steps which aren't possible in classical computation.
+
+<a name="r-x-gate"></a>
+#### Rx Gate
+##### The Rx gate is a single-qubit rotation through angle θ (radians) around the x-axis.
+##### We can clearly see Rx = [cos(θ/2)  -i sin(θ/2)]
+##### .                       [-i sin(θ/2)  cos(θ/2)]
+
+<a name="r-y-gate"></a>
+#### Ry Gate
+##### The Ry gate is a single-qubit rotation through angle θ (radians) around the y-axis.
+##### We can clearly see Ry = [cos(θ/2)   sin(θ/2)]
+##### .                       [-sin(θ/2)  cos(θ/2)]
+
+<a name="r-z-gate"></a>
+#### Rz Gate
+##### The Rz gate is a single-qubit rotation through angle \thetaθ (radians) around the z-axis.
+##### We can clearly see Rz = [e^(-θ/2)   0]
+##### .                       [0    e^(θ/2)]
+
+<a name="s-gate"></a>
+#### S Gate
+##### The S gate is also known as the phase gate or the Z90 gate, because it represents a 90 degree rotation around the z-axis.
+##### We can clearly see S = [1   0]
+##### .                      [0  -1]
+
+<a name="pauli-x-gate"></a>
+#### Pauli-X Gate
+##### It is the quantum equivalent of the NOT gate for classical computers (with respect to the standard basis |0> , |1> , which distinguishes the Z-direction; It maps |0>  to |1>  and |1>  to |0>. Due to this nature, it is sometimes called bit-flip.
+##### We can clearly see X = [0  1]
+##### .                      [1  0]
+##### Application: Used for bit-flipping
+
+<a name="pauli-y-gate"></a>
+#### Pauli-Y Gate
+##### It equates to a rotation around the Y-axis of the Bloch sphere by π  radians. It maps |0>  to i|1> and |1>  to -i|0>. It is represented by the Pauli Y matrix:
+##### We can clearly see Y = [0 -i]
+##### .                      [i  0]
+
+<a name="pauli-z-gate"></a>
+#### Pauli-Z Gate
+##### It equates to a rotation around the Z-axis of the Bloch sphere by π  radians. It leaves the basis state |0>  unchanged and maps |1>  to -|1>. Due to this nature, it is sometimes called phase-flip. It is represented by the Pauli Z matrix:
+##### We can clearly see Z = [1  0]
+##### .                      [0 -1]
+
+<a name="square-root-not-gate"></a>
+#### Square Root Not Gate
+##### It maps the basis state |0>  to ( (i+1)|0> + (i-1)|1> )/2 and |1>  to ( (i-1)|0> + (i+1)|1> )/2 . It is represented by the Pauli Z matrix:
+##### We can clearly see Z = [1+i  1-i]
+##### .                      [1-i  1+i]
+##### Squared root-gates can be constructed for all other gates by finding a unitary matrix that, multiplied by itself, yields the gate one wishes to construct the squared root gate of. All rational exponents of all gates can be found similarly.
+
+<a name="phase-shift-gate"></a>
+#### Phase Shift Gate
+##### It is a gate that leave the basic state |0>  unchanged and maps |1>  to e^(iΦ)|1> . The probability of measuring a |0>  or |1>  is unchanged after applying this gate, however it modifies the phase of the quantum state. This is equivalent to tracing a horizontal circle (a line of latitude) on the Bloch sphere by Φ radians. It is represented by the phase shift matrix:
+##### We can clearly see R = [1      0 ]
+##### .                      [0  e^(iΦ)]
+##### where Φ  is the phase shift.
+
+<a name="double-qubit"></a>
+### Double Qubit
+<a name="swap-gate"></a>
+#### Swap Gate
+##### The swap gate swaps two qubits. Expressed in basis states, the SWAP gate swaps the state of the two qubits involved in the operation:
+##### We can clearly see SWAP = [1 0 0 0]
+##### .                         [0 0 1 0]
+##### .                         [0 1 0 0]
+##### .                         [0 0 0 1]
+
+<a name="c-not-gate"></a>
+#### Controlled not Gate: Cx,Cy
+##### Controlled gates act on 2 or more qubits, where one or more qubits act as a control for some operation. For example, the controlled NOT gate (or CNOT or cX) acts on 2 qubits, and performs the NOT operation on the second qubit only when the first qubit is |1> , and otherwise leaves it unchanged. With respect to the basis |00> , |01>, |10>, |11> , it is represented by the matrix:
+##### We can clearly see cX = [1 0 0 0]
+##### .                       [0 1 0 0]
+##### .                       [0 0 0 1]
+##### .                       [0 0 1 0]
+##### The CNOT (or controlled-X) gate can be described as the gate that maps |a,b> to |a, a^b>. (Here ^ is for Ex-OR gate)
+
+<a name="ising-gate"></a>
+#### Ising (ZZ) coupling gate
+##### The gate is used to apply phase e^(iα) to the basis elements |00⟩ and |11⟩, and e(−iα) otherwise. 
+##### We can clearly see cX = [e^(iα) 0 0 0 ]
+##### .                       [0 e^(-iα) 0 0]
+##### .                       [0 0 e^(-iα) 0]
+##### .                       [0 0 0 e^(iα) ]
+
+<a name="triple-qubit"></a>
+### Triple Qubit
+<a name="toffoli-gate"></a>
+#### toffoli Gate: CCNOT
+##### is a 3-bit gate, which is universal for classical computation but not for quantum computation. The quantum Toffoli gate is the same gate, defined for 3 qubits. If we limit ourselves to only accepting input qubits that are \0>  and |1> , then if the first two bits are in the state |1>  it applies a Pauli-X (or NOT) on the third bit, else it does nothing. It is an example of a controlled gate. Since it is the quantum analog of a classical gate, it is completely specified by its truth table.
+##### We can clearly see CCNOT = [1  0  0  0  0  0  0  0]
+##### .                          [0  1  0  0  0  0  0  0]
+##### .                          [0  0  1  0  0  0  0  0]
+##### .                          [0  0  0  1  0  0  0  0]
+##### .                          [0  0  0  0  1  0  0  0]
+##### .                          [0  0  0  0  0  1  0  0]
+##### .                          [0  0  0  0  0  0  0  1]
+##### .                          [0  0  0  0  0  0  1  0]
+
+<a name="fredkin-gate"></a>
+#### Fredkin (CSWAP) gate
+##### It performs a controlled swap. It is universal for classical computation. It has the useful property that the numbers of 0s and 1s are conserved throughout, which in the billiard ball model means the same number of balls are output as input.
+##### We can clearly see CSWAP = [1  0  0  0  0  0  0  0]
+##### .                          [0  1  0  0  0  0  0  0]
+##### .                          [0  0  1  0  0  0  0  0]
+##### .                          [0  0  0  1  0  0  0  0]
+##### .                          [0  0  0  0  1  0  0  0]
+##### .                          [0  0  0  0  0  0  1  0]
+##### .                          [0  0  0  0  0  1  0  0]
+##### .                          [0  0  0  0  0  0  0  1]
