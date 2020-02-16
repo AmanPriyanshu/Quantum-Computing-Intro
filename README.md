@@ -14,8 +14,8 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
         - [Qubits](#qubits)
         - [Quantum Logic Gates Basics](#quantum-logic-gates-basics)
         - [Quantum Memory](#quantum-memory)
+        - [Quantum Entanglement](#quantum-entanglement)
         - [Quantum Gates](#quantum-gates)
-        -
     - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
     - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
 - [LIBRARIES- which I have tried out](#libraries)
@@ -82,15 +82,24 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 #### Quantum Memory
 ##### This memory may be found in one of two classical states: the zero state or the one state. We may represent the state of this memory using Dirac notation:
 ##### |0> := (1)
-#####        (0)
+##### .     (0)
 ##### |1> := (0)
-#####        (1)
+##### .     (1)
 *How do I add Images*
 ##### A quantum memory may then be found in any quantum superposition |Ψ> of the two classical states |0> and |1>:
 ##### |Ψ> := α|0> + β|1> := (α)
-#####                       (β)
+##### .                     (β)
 ##### α^2 + β^2 = 1
 ##### In general, the coefficients α and β are complex numbers. In this scenario, one qubit of information is said to be encoded into the quantum memory. The state |Ψ> is not itself a probability vector but can be connected with a probability vector via a measurement operation. If the quantum memory is measured to determine if the state is |0> or |1> (this is known as a computational basis measurement), the zero state would be observed with probability α^2 and the one state with probability β^2. The numbers α and β are called quantum amplitudes.
 
+<a name="quantum-entaglement"></a>
+#### Quantum Entanglement
+##### An important distinguishing feature between qubits and classical bits is that multiple qubits can exhibit quantum entanglement. Quantum entanglement is a nonlocal property of two or more qubits that allows a set of qubits to express higher correlation than is possible in classical systems. The simplest system to display quantum entanglement is the system of two qubits. Consider, for example, two entangled qubits in the |Φ+> Bell state:
+##### 1(|00>+|11>)/(2)^0.5
+##### In this state, called an equal superposition, there are equal probabilities of measuring either product state |00>  or |11> , as (1/(2)^0.5)^2=1/2. In other words, there is no way to tell if the first qubit has value “0” or “1” and likewise for the second qubit.
+##### Imagine that these two entangled qubits are separated, with one each given to Alice and Bob. Alice makes a measurement of her qubit, obtaining—with equal probabilities—either |0>  or |1> , i.e., she can now tell if her qubit has value “0” or “1”. Because of the qubits' entanglement, Bob must now get exactly the same measurement as Alice. For example, if she measures a |0> , Bob must measure the same, as |00>  is the only state where Alice's qubit is a |0> . In short, for these two entangled qubits, whatever Alice measures, so would Bob, with perfect correlation, in any basis, however far apart they may be and even though both can not tell if their qubit has value “0” or “1” — a most surprising circumstance that can not be explained by classical physics.
+
+
 <a name="quantum-gates"></a>
 #### Quantum Gates
+##### In quantum computing and specifically the quantum circuit model of computation, a quantum logic gate (or simply quantum gate) is a basic quantum circuit operating on a small number of qubits. They are the building blocks of quantum circuits, like classical logic gates are for conventional digital circuits. Let us undestand some of the basic gates. *nly mentioning those I have come across or read about. I'm fairly new to the topic but I wanted to explore so I may not have included many gat
