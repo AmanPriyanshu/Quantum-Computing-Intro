@@ -3,10 +3,10 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 
 ## Table of Contents:
 
-<!-- MarkdownTOC depth=4 -->
+<!-- MarkdownTOC depth=8 -->
 - [INTRODUCTION](#introduction)
     - [Quantum Mechanics](#quantum-mechanics)
-     - [Double Slit Experiment](#double-slit-experiment)
+        - [Double Slit Experiment](#double-slit-experiment)
     - [Quantum Computing](#quantum-computing)
     - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
     - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
