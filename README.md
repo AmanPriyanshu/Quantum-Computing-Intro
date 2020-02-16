@@ -6,6 +6,7 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 <!-- MarkdownTOC depth=4 -->
 - [INTRODUCTION](#introduction)
     - [Quantum Mechanics](#quantum-mechanics)
+     - [Double Slit Experiment](#double-slit-experiment)
     - [Quantum Computing](#quantum-computing)
     - [Quantum Circuits a Basic Understanding](#quantum-circuit-basics)
     - [My Understanding of Quantum Computing](#my-understanding-of-quantum-computing)
@@ -25,6 +26,7 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 
 ##### The ability of particles part of the atomic scale to behave as neither particles nor waves, they exhibit a unique nature which is understood and studied as Quantum Mechanics. 
 
+<a name="double-slit-experiment"></a>
 #### Double Slit Expermient
 ##### Let's take a look at Double Slit Experiment, now we know for sure that a Double Slit experiment for a particle-system would give us no interference pattern. Rather it would simply give us two patterns directly in front of the slits. Now performing the same experiment with a wave-system we get an interference pattern. Light on the other hand was believed to be of particle nature, but with this experiment it gave an interference pattern.
 
