@@ -34,10 +34,10 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
     - [Triple Qubit](#triple-qubit)
         - [Toffoli Gate](#toffoli-gate)
         - [Fredkin Gate](#fredkin-gate)
-        
-- [Quantum Circuits a Basic Understanding](#quantum-circuit)
+- [Quantum Circuits](#quantum-circuit)
+    - [Getting Started](#getting-started-circuits)
 - [LIBRARIES- which I have tried out](#libraries)
-    - [Quiskit](#quiskit)
+    - [Qiskit](#qiskit)
     <!--- - [Yao.jl](#yao-jl) --->
     <!--- - [Cirq](#cirq) --->
     <!--- - [Strawberryfields](#strawberryfields) --->
@@ -257,3 +257,13 @@ Understanding and exploring Quantum-Computing conecpts as well as developing som
 ##### .                          [0  0  0  0  0  0  1  0]
 ##### .                          [0  0  0  0  0  1  0  0]
 ##### .                          [0  0  0  0  0  0  0  1]
+<a name="quantum-circuit"></a>
+## Quantum Circuits
+##### In quantum information theory, a quantum circuit is a model for quantum computation in which a computation is a sequence of quantum gates, which are reversible transformations on a quantum mechanical analog of an n-bit register. This analogous structure is referred to as an n-qubit register.
+<a name="getting-started-circuits"></a>
+### Getting Started <>
+##### Above is my repository where I get started with basic quantum circuits in Qiskit.
+<a name="libraries"></a>
+## LIBRARIES- which I have tried out
+<a name="qiskit"></a>
+### Qiskit <https://github.com/Qiskit/qiskit>
